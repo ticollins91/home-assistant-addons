@@ -18,6 +18,10 @@ on:
         description: 'Changelog URL'
         required: true
         default: 'https://github.com/ticollins91/home-assistant-matter-hub/releases'
+      changelogText:
+        description: 'What is new in this version?'
+        required: true
+        default: 'Initial release of forked matter-hub.'
   repository_dispatch:
     event_name: release
 
@@ -53,12 +57,12 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
 
-      - name: Copy Changelog
-        env:
-          CHANGELOG_FILE: ${{steps.event_parser.outputs.project}}/CHANGELOG.md
+      - name: Create Changelog
         run: |
-          curl -L "${{ steps.event_parser.outputs.changelogUrl }}" > $CHANGELOG_FILE
-          git add $CHANGELOG_FILE
+          PROJECT_DIR="${{ steps.event_parser.outputs.project }}"
+          mkdir -p "$PROJECT_DIR"
+          echo "${{ github.event.inputs.changelogText }}" > "$PROJECT_DIR/CHANGELOG.md"
+          git add "$PROJECT_DIR/CHANGELOG.md"
 
       - name: Apply release version
         env:
