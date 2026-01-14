@@ -17,7 +17,7 @@ on:
       changelogUrl:
         description: 'Changelog URL'
         required: true
-        default: 'https://github.com/ticollins91/home-assistant-addons/'
+        default: 'https://github.com/ticollins91/home-assistant-matter-hub/releases'
   repository_dispatch:
     event_name: release
 
