@@ -9,7 +9,7 @@ on:
       channel:
         description: 'Channel (latest, beta, alpha)'
         required: true
-        default: 'alpha'
+        default: 'latest'
       version:
         description: 'Version (e.g., 3.0.4-alpha)'
         required: true
