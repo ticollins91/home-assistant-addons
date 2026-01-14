@@ -3,9 +3,9 @@ on:
   workflow_dispatch:
     inputs:
       project:
-        description: 'Project (e.g., hamh)'
+        description: 'Project (e.g., home-assistant-matter-hub-addon)'
         required: true
-        default: 'hamh'
+        default: 'home-assistant-matter-hub-addon'
       channel:
         description: 'Channel (latest, beta, alpha)'
         required: true
