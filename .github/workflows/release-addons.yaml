@@ -1,11 +1,11 @@
 name: Release Home-Assistant-Matter-Hub
 on:
-  workflow_dispatch:
+workflow_dispatch:
     inputs:
       project:
-        description: 'Project (e.g., home-assistant-matter-hub-addon)'
+        description: 'Project (e.g., hamh)'
         required: true
-        default: 'home-assistant-matter-hub-addon'
+        default: 'hamh'
       channel:
         description: 'Channel (latest, beta, alpha)'
         required: true
@@ -17,7 +17,7 @@ on:
       changelogUrl:
         description: 'Changelog URL'
         required: true
-        default: 'https://github.com/ticollins91/home-assistant-matter-hub/releases'
+        default: 'https://github.com/ticollins91/home-assistant-addons/'
   repository_dispatch:
     event_name: release
 
