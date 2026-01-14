@@ -1,14 +1,14 @@
 name: Release Home-Assistant-Matter-Hub
 on:
+  workflow_dispatch:
   repository_dispatch:
     event_name: release
-# client_payload:
-#   project: "hamh"
-#   channel: "latest" | "beta" | "alpha"
-#   version: "3.0.0-alpha.33"
-#   changelogUrl: "https://..."
-
-
+    
+client_payload:
+  project: "hamh"
+  channel: "alpha"
+  version: "3.0.4-alpha"
+  changelogUrl: "https://..."
 
 jobs:
   release:
