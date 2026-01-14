@@ -1,3 +1,10 @@
+## [3.0.4-alpha](https://github.com/t0bst4r/home-assistant-matter-hub/compare/main...ticollins91:home-assistant-matter-hub:v3.0.4-alpha)) (2026-01-14)
+
+
+### Bug Fixes
+
+* Prevent CT-only lights from exposing color wheel ([3ca7218](https://github.com/ticollins91/home-assistant-matter-hub/commit/d8d8acf19941d82a16a813aa0be9374064560b8f))
+
 ## [3.0.3](https://github.com/t0bst4r/home-assistant-matter-hub/compare/v3.0.2...v3.0.3) (2025-12-12)
 
 
