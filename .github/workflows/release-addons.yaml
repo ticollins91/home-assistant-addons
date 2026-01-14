@@ -1,6 +1,6 @@
 name: Release Home-Assistant-Matter-Hub
 on:
-workflow_dispatch:
+  workflow_dispatch:
     inputs:
       project:
         description: 'Project (e.g., hamh)'
